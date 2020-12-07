@@ -39,8 +39,10 @@ const renderLists = () => {
   );
 
   const filteredLists = searchedLists.filter((list) =>
-    list.user.toLowerCase().includes(filters.user.toLocaleLowerCase())
+    list.user.toLowerCase().includes(localStorage.getItem("currentUser"))
   );
+
+  console.log(filteredLists);
 
   listsEl.innerHTML = "";
 

@@ -28,7 +28,7 @@ listBody.addEventListener("input", (e) => {
 // remove list button
 removeButton.addEventListener("click", (e) => {
   removeList(listId);
-  location.assign("/index.html");
+  location.assign("/home.html");
 });
 
 window.addEventListener("storage", (e) => {

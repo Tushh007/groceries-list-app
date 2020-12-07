@@ -15,7 +15,6 @@ document.querySelector("#create-list").addEventListener("click", () => {
 
 document.querySelector("#search-text").addEventListener("input", (e) => {
   setFilters({
-    user: location.hash.substring(1),
     searchText: e.target.value,
   });
   renderLists();

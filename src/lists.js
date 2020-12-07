@@ -105,7 +105,7 @@ const updateList = (id, updates) => {
   }
 
   saveLists();
-  return list
+  return list;
 };
 
 lists = loadLists();
