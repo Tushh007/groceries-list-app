@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
     <title>Lists App</title>
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./styles/styles.css">
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <div class="container">
-        <h1 class="header__title">Grocery Lists App</h1>
-        <h2 class="header__subtitle">Make lists and never forget!</h2>
-      </div>
+        <div class="container">
+            <h1 class="header__title">Grocery Lists App</h1>
+            <h2 class="header__subtitle">Make lists and never forget!</h2>
+        </div>
     </header>
-    <div class="actions">
-      <div class="actions__container">
-        <input id="search-user" type="text" class="input" placeholder="Filter User..." />
-        <input id="search-text" type="text" class="input" placeholder="Filter grocery lists..." />
-        <select id="filter-by" class="dropdown">
-            <option value="byEdited">Sort by last edited</option>
-            <option value="byCreated">Sort by recently created</option>
-            <option value="alphabetical">Sort alphabetically</option>
-        </select>
-      </div>
-    </div>
     <div class="container">
-      <div id="lists"></div>
-      <button id="create-list" class="button">Create Grocery List</button>
+        <div class="card center">
+            <div class="container">
+                <h4><b><input id="search-user" type="text" class="input" placeholder="Enter your name." /></b></h4>
+                <p><button id="login" class="button">Login</button></p>
+            </div>
+        </div>
     </div>
     <script src="./scripts/index-bundle.js"></script>
-  </body>
+</body>
+
 </html>

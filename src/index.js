@@ -1,30 +1,16 @@
-import { createList } from "./lists";
-import { setFilters } from "./filters";
-import { renderLists } from "./views";
+let userList = ['user1', 'user2', 'user3']
+let currentUser = ''
 
-renderLists();
-
-document.querySelector("#create-list").addEventListener("click", () => {
-  const id = createList();
-  location.assign(`/edit.html#${id}`);
+document.querySelector("#search-user").addEventListener("input", (e) => {
+  currentUser = e.target.value;
 });
 
-document.querySelector("#search-text").addEventListener("input", (e) => {
-  setFilters({
-    searchText: e.target.value,
-  });
-  renderLists();
-});
-
-document.querySelector("#filter-by").addEventListener("change", (e) => {
-  setFilters({
-    sortBy: e.target.value,
-  });
-  renderLists();
-});
-
-window.addEventListener("storage", (e) => {
-  if (e.key === "lists") {
-    renderLists();
+document.querySelector("#login").addEventListener("click", () => {
+  const user = userList.find((user) => user === currentUser);
+  if (user) {
+    location.assign(`/home.html#${user}`);
+  } else {
+    console.log('user not found')
   }
+  
 });
