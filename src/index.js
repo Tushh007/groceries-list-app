@@ -10,7 +10,7 @@ document.querySelector("#login").addEventListener("click", () => {
   if (user) {
     location.assign(`/home.html#${user}`);
   } else {
-    console.log('user not found')
+    document.querySelector("#msg").textContent = "USER NOT FOUND! TRY AGAIN..."
   }
   
 });

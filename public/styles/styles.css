@@ -197,3 +197,9 @@ a {
   padding: 10px;
   text-align: center;
 }
+
+#msg {
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}
