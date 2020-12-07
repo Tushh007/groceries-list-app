@@ -42,8 +42,6 @@ const renderLists = () => {
     list.user.toLowerCase().includes(localStorage.getItem("currentUser"))
   );
 
-  console.log(filteredLists);
-
   listsEl.innerHTML = "";
 
   if (filteredLists.length > 0) {
