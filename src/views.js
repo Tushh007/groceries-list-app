@@ -34,8 +34,12 @@ const renderLists = () => {
   const listsEl = document.querySelector("#lists");
   const filters = getFilters();
   const lists = sortLists(filters.sortBy);
-  const filteredLists = lists.filter((list) =>
+  const searchedLists = lists.filter((list) =>
     list.title.toLowerCase().includes(filters.searchText.toLowerCase())
+  );
+
+  const filteredLists = searchedLists.filter((list) =>
+    list.user.toLowerCase().includes(filters.user.toLocaleLowerCase())
   );
 
   listsEl.innerHTML = "";

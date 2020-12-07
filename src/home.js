@@ -9,12 +9,13 @@ document.querySelector("#logout").addEventListener("click", () => {
 });
 
 document.querySelector("#create-list").addEventListener("click", () => {
-  const id = createList();
+  const id = createList(location.hash.substring(1));
   location.assign(`/edit.html#${id}`);
 });
 
 document.querySelector("#search-text").addEventListener("input", (e) => {
   setFilters({
+    user: location.hash.substring(1),
     searchText: e.target.value,
   });
   renderLists();

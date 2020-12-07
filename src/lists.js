@@ -22,12 +22,13 @@ const saveLists = () => {
 // Expose lists from module
 const getLists = () => lists;
 
-const createList = () => {
+const createList = (user) => {
   const id = uuidv4();
   const timestamp = moment().valueOf();
 
   lists.push({
     id: id,
+    user: user,
     title: "",
     body: "",
     createdAt: timestamp,
